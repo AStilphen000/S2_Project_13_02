@@ -5,8 +5,8 @@
    Tutorial 11
    Case Problem 2
 
-   Author: 
-   Date:   
+   Author: Angelina Stilphen
+   Date:   3.25.19
    
    Filename: mt_calc.js
 	
@@ -55,4 +55,11 @@ function lastEq(textStr) {
    var lines = textStr.split(/\r?\n/);
    var lastExp = lines[lines.length-2];
    return lastExp.substr(0, lastExp.indexOf("=")).trim();
+}
+
+// run the init function when the page loads 
+window.onload = init; 
+
+function init() {
+      var calcButtons 
 }
