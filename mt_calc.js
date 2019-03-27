@@ -57,9 +57,20 @@ function lastEq(textStr) {
    return lastExp.substr(0, lastExp.indexOf("=")).trim();
 }
 
+
+
 // run the init function when the page loads 
 window.onload = init; 
 
 function init() {
-      var calcButtons 
+      var calcButtons = document.querySelectorAll("calcWindow");
+      for (var i = 0; i < array.length; i++) { 
+            document.addEventListener("click", buttonClick);
+      }
+      document.getElementById(calcWindow).addEventListener("keydown", calcKeys); 
 }
+
+function buttonClick(e) {
+      var calcValue = document.getElementById("calcWindow");
+      var calcDecimal = document.getElementById("decimals");
+} 
