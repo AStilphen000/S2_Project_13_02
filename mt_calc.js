@@ -62,14 +62,18 @@ function lastEq(textStr) {
 // run the init function when the page loads 
 window.onload = init; 
 
+// created a block of code inside a function that is designed to preform the particular task assigned to it 
 function init() {
       var calcButtons = document.getElementsByClassName("calcButton");
+
+      // created for loop which runs the same code over and over again with different values, inside the for loop targetted the array calcButtons to switch onclick to buttonClick 
       for (var i = 0; i < calcButtons.length; i++) { 
             calcButtons[i].onclick =  buttonClick;
       }
       document.getElementById("calcWindow").onkeydown = calcKeys; 
 }
 
+// created another function inside the function are different variables to target to different values. Also inside the buttonClick function is a switch case that changes the buttons value (break ends a case)
 function buttonClick(e) {
       var calcValue = document.getElementById("calcWindow").value;
       var calcDecimal = document.getElementById("decimals").value; 
@@ -99,6 +103,7 @@ function buttonClick(e) {
             document.getElementById("calcWindow").focus();
       } 
 
+      // created a function named calcKeys that targets the variables calcValue and calcDecimal and creating a switch case to target the keys that the user presses. 
       function calcKeys(e) {
             var calcValue = document.getElementById("calcWindow").value;
             var calcDecimal = document.getElementById("decimals").value; 
@@ -114,9 +119,10 @@ function buttonClick(e) {
 
                   case "ArrowUp":
                   calcValue += lastEq(calcWindow.value);
-                  break;
-                  default:
+                  break; 
+                  default: 
                         break;
+                        // this makes sure the switch keys actually work 
                         e.preventDefault();
             }
             document.getElementById("calcWindow").value = calcValue;
